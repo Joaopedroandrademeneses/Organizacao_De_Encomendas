@@ -1,18 +1,13 @@
 #ifndef ENCOMENDA_H
 #define ENCOMENDA_H
 
-#define MAX_ENCOMENDAS 50
-
 typedef struct {
-	int codigo;
-	char nome[50];
-	float peso;
-	int prazo;
-		
+    int id;
+    char nome[100];
+    char endereco[200];
+    double peso;
 } Encomenda;
 
-void cadastrarEncomenda(Encomenda encomendas[], int *quantidade);
-
-void listarEncomendas(Encomenda encomendas[], int *quantidade);
+Encomenda* criarEncomenda(int id, const char* nome, const char* endereco, double peso);
 
 #endif
